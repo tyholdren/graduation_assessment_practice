@@ -5,18 +5,29 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js"></script>
   <script src="./js/index.js"></script>
+
 </head>
 <body>
+    <form action="/quotes" method="post">
   <div id="container">
   <h1>Message Board</h1>
-  <div id="new-message">
+  <div id="new-message" method="post" action="/quotes">
     <div class="row">
-      <input id="pass" placeholder="Password" type="password"></input>
+
+        <label>password</label>
+    <input name="pass" value="" type="password">
+
+
       <button id="save">Save</button>
     <div>
-    <textarea id="desc" placeholder="New message here..."></textarea>
+
+
+    <textarea id = "desc" name="desc" placeholder="New message here..."></textarea>
+
+
   </div>
   <ul id="message-list"></ul>
   </div>
+</form>
 </body>
 </html>
