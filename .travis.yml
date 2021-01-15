@@ -1,16 +1,8 @@
 language: node_js
 node_js:
-- 5.5.0
-notifications:
-  email: false
+  - '15.2.1'
 before_install:
-- travis_retry nvm install 5.5.0
-- if [ $TRAVIS_SECURE_ENV_VARS == "true" ]; then npm install request; npm run update-package;
-  fi
-env:
-  global:
-   secure: VS9lP8jlXEVmUswUzgnRUWJUJj/joWN5zJv+Yh8aimNnLGrN9CDNWtNtgeEBKkr03mCelurLmufdusMJDQuJGaoHdsJ6WSSjDUhOcJH4CYUy8vIE9HoRkF290TPeSMKRG7lFz/8104bQoz00IzQyK5CegzJ8Gf57f4saED1eZQi8ylY2HmlVcogs+cVEsZOfYpevHnMOgg3UZMiQt91h8177ogkBPOBn4TkHbmnVXaUIeN6qnV7lbBQ4SeFNAg7RuFnt875HmduAaZNn2Y/0yGbLiPHymSVIMnO4l8cOArWKOm8enMPjHQQAF7bz4h5l44KK0ZACbrG2X3WJHzpIkgUrNF9zLqB/M9DqzQZ+IBME2jHQs390WjbCneEnORHxY3DyPvZ6e4QVMOu0fDaUHOJrkvUj97on1btrIE1RoxiaT4tox7/zNMQXGelmuWH/N9FM+X2kGCEYzCCPo+IW501spLgyBTmLoC9osJrJ/lxhwJ7p/vBrRWQb3HcF2QNDM6baIwY0yEqc/ipxagJJ6HPVdtX5nsSl9X7m7t1Q7pK9Rb2WhObXeBuZnHHRVKqmX6Tjuzffoi5faDxY311fzUIfVHezyzSGKESigFDN44bg06Yn7Gx4xszsHyswVbP4uZkilIeBlpYT6csACMYI3Kt9HFfrhMqPxy0TX7qOkkQ=
-   secure: Kil3kVmaXwU5eBj2zBWkgxFtjtzlNM2pBqOzKCMz7mj9XB60WeXtskKTbSiYhagSSkoA9zbxf8FOCzPuNQx5Ss5VbVwFBXg/jVLaI6smeLSBqz8eRn6Wh97n2saOPXrrhxWi2sKv6m5SrxvZ1+RgNh6KLoTVt8TnPv8JGJ+vAClzcBu45P+atEq1jkPfVBXn81pGCNgPD9Pi9EGYLJuQJHtyh67j//93oTJy+ir500pi5u2KIXXVfvyNVj7e5CBPVaSg4UZTTCvDEOYBsqCrZkEXlxd/wHfffXRRn8wJq/D9DaIn6HJshw+AKh8k5G8XTDvtT46/Gb5SIPNx8Jj4EbC14OTiKrw8onrFbdi6Zdtq5z2txYPWIEpfyViM1ToQLRCMRmdwZzpEmizuLH3YT7EyFCcKjBYe0fF7QvLKXZJhmHI7Nt3BJhXX/bcLc4UfiSHqNFUufr2OEniGO/Oo+wQEyzyFkCP+BqswyV3O7LEtdWnTH6lHddj1zirkA50PXkcRwhqUjAMZU6VHnUy0xkmg+tbjc+ALWFj3j8FzsULMBx0LCkffg0l5L8PFCDPssJqeo/YmVJFOwZEfE73MKcpMY4VHGVJ0RcUSmx7Tpsa9JiwFqdGpObovBqqKRdf2WnuK23XCxbrz5KNe+5fywSRgziCyFHDbocg9JQjjXWQ=
+  - npm install request;
 script:
-- if [ $TRAVIS_SECURE_ENV_VARS == "true" ]; then npm run get-test-utils && npm run
-  test ; npm run lint ; npm run report; else npm run merge; fi
+  - npm run merge;
+
